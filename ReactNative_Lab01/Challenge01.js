@@ -14,7 +14,7 @@ let markHigherBMI = (mark, john) => {
     return false;
 }
 
-let Marks = {
+let Mark = {
     height: 78,
     weight: 1.69
 }
@@ -24,4 +24,24 @@ let John = {
     weight: 1.95
 }
 
-console.log(markHigherBMI(Marks, John));
+if(markHigherBMI(Mark, John)){
+    console.log('Mark has a higher BMI than John.');
+}else{
+    console.log('John has a higher BMI than Mark.');
+}
+
+Mark = {
+    height: 95,
+    weight: 1.88
+}
+
+John = {
+    height: 85,
+    weight: 1.76
+}
+
+if(markHigherBMI(Mark, John)){
+    console.log('Mark has a higher BMI than John.');
+}else{
+    console.log('John has a higher BMI than Mark.');
+}
