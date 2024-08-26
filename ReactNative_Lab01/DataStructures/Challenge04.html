@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Challenge 4</title>
+  </head>
+  <body>
+    <textarea
+      name="text"
+      id="text"
+      cols="30"
+      rows="10"
+      placeholder="Enter text here"
+    ></textarea>
+    <button id="btn" type="button">Convert to camelCase</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          // Get the text from the textarea
+          let text = $("#text").val();
+          console.log(text);
+
+          // ách chuỗi văn bản thành một mảng các dòng
+          let textArray = text.split("\n");
+          textArray.forEach((element) => {
+            // Tách các từ trong mỗi dòng, xóa khoảng trắng ở đầu và cuối dòng
+            let words = element.trim().split("_");
+            // Chuyển từ đầu tiên thành chữ thường
+            let camelCase = words[0].toLowerCase();
+            for (let i = 1; i < words.length; i++) {
+              // Chuyển từ đầu tiên của các từ còn lại thành chữ hoa và thêm vào chuỗi camelCase
+              camelCase +=
+                words[i][0].toUpperCase() + words[i].slice(1).toLowerCase();
+            }
+            console.log(camelCase);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
