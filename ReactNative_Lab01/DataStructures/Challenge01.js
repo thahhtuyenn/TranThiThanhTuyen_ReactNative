@@ -54,7 +54,9 @@ let printGoals = function ([...players]) {
       players[i] === "Gnarby" ||
       players[i] === "Hummels"
     ) {
-      console.log(`Goal ${i + 1}: ${players[i]}`);
+      if (players[i] === "Lewandowski") {
+        console.log(`Goal ${i + 1}: ${players[i]}`);
+      }
     }
   }
 };
