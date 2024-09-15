@@ -25,7 +25,7 @@ const Screen1b = () => {
             }}
           >
             <Image
-              source={require("../images/ForgetPass.png")}
+              source={require("../../assets/images/ForgetPass.png")}
               style={styles.img}
             />
           </View>
@@ -64,7 +64,7 @@ const Screen1b = () => {
           </View>
           <View style={{ flex: 1 }}>
             <View style={styles.inputEmail}>
-              <Image source={require("../images/email.png")}></Image>
+              <Image source={require("../../assets/images/email.png")}></Image>
               <Text>Email</Text>
             </View>
           </View>

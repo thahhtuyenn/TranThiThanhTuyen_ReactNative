@@ -25,7 +25,7 @@ const Screen1a = () => {
           }}
         >
           <Image
-            source={require("../images/Ellipse8.png")}
+            source={require("../../assets/images/Ellipse8.png")}
             style={styles.img}
           />
         </View>

@@ -12,7 +12,10 @@ const LoginFirstScreen = () => {
           alignItems: "center",
         }}
       >
-        <Image source={require("../images/Ellipse8.png")} style={styles.img} />
+        <Image
+          source={require("../../assets/images/Ellipse8.png")}
+          style={styles.img}
+        />
       </View>
       <View
         style={{
