@@ -1,7 +1,7 @@
 
 # Hello 👋👋
 
-## 📚Môn học: Lập Trình Thiết Bị Di Động (React NativeNative)
+## 📚Môn học: Lập Trình Thiết Bị Di Động (React Native)
 
 ### 💻Bài tập hàng tuần
 
