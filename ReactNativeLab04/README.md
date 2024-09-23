@@ -10,7 +10,7 @@
 
 
 ## Video demo
-![video](https://github.com/thahhtuyenn/TranThiThanhTuyen_ReactNative/blob/main/ReactNativeLab04/assets/demo/demo-reactnative-tuan4.gif)
+![demo](https://github.com/thahhtuyenn/TranThiThanhTuyen_ReactNative/blob/main/ReactNativeLab04/assets/demo/demo-reactnative-tuan4.gif)
 
 #### Hoặc [Xem video demo](https://youtu.be/05ggTbbkLaQ?si=yQ6YIukXc7Yo2i3_)
 ## 👤Tác giả
