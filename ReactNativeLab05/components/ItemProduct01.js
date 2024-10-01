@@ -21,8 +21,9 @@ export const ItemProduct01 = ({ name, image, shop }) => {
         style={{
           justifyContent: "space-around",
           height: 100,
-          width: "50%",
+          width: "45%",
           paddingBottom: 25,
+          margin: 7,
         }}
       >
         <Text

@@ -21,7 +21,7 @@ export const ProductScreen02 = ({ navigation }) => {
   useEffect(() => {
     axios({
       method: "get",
-      url: `https://66f386bd71c84d805878f8e0.mockapi.io/api/products`,
+      url: `https://66f38c9f71c84d8058790dec.mockapi.io/products`,
     }).then((response) => {
       console.log(response.data);
       setProducts(response.data);
@@ -77,6 +77,7 @@ export const ProductScreen02 = ({ navigation }) => {
           Bạn có thắc mắc với sản phẩm vừa xem. Đừng ngại chat với shop.
         </Text>
       </View>
+      <View style={{height: 900, width: "100%"}}>
       <FlatList
         numColumns={2}
         data={products}
@@ -92,6 +93,7 @@ export const ProductScreen02 = ({ navigation }) => {
         )}
         keyExtractor={(item) => item.id}
       />
+      </View>
     </SafeAreaView>
   );
 };

@@ -16,7 +16,7 @@ export const ProductScreen01 = ({ navigation }) => {
   useEffect(() => {
     axios({
       method: "get",
-      url: `https://66f386bd71c84d805878f8e0.mockapi.io/api/products`,
+      url: `https://66f38c9f71c84d8058790dec.mockapi.io/products`,
     }).then((response) => {
       console.log(response.data);
       setProducts(response.data);
@@ -54,13 +54,15 @@ export const ProductScreen01 = ({ navigation }) => {
         </Text>
       </View>
 
-      <FlatList
-        data={products}
-        renderItem={({ item }) => (
-          <ItemProduct01 name={item.name} image={item.image} shop={item.shop} />
-        )}
-        keyExtractor={(item) => item.id}
-      />
+      <View style={{height: 900, width: "100%"}}>
+        <FlatList
+          data={products}
+          renderItem={({ item }) => (
+            <ItemProduct01 name={item.name} image={item.image} shop={item.shop} />
+          )}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
     </SafeAreaView>
   );
 };

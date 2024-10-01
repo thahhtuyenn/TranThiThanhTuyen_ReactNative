@@ -17,7 +17,7 @@ export const ItemProduct02 = ({
 }) => {
   return (
     <View style={styles.item}>
-      <Image resizeMode="contain" source={image} style={{ height: 90 }} />
+      <Image resizeMode="contain" source={image} style={{ height: 90, width: "100%" }} />
 
       <Text
         style={{
