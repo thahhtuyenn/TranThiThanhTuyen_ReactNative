@@ -27,15 +27,17 @@ export const Item = ({name, id}) => {
                     alignItems: 'center',
                     borderRadius: 5,
                 }
-            }>
+            } onPress={({id}) => del(id)}>
                     <Text style={styles.textBtn}>Delete</Text>
                 </Pressable>
         </View>
     )
 }
 
+
+
 const add = () => {
-    axios.post('/crudapi', {
+    axios.post('https://66f38c9f71c84d8058790dec.mockapi.io/crudapi', {
         name: 'Lui Lui'
       })
       .then((response) => {
@@ -46,19 +48,26 @@ const add = () => {
       });
 }
 
-export const DemoCrud = () => {
+const del = (id) => {
+    axios.delete(`https://66f38c9f71c84d8058790dec.mockapi.io/crudapi:${id}`)
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+}
 
+export const DemoCrud = () => {
     const [names, setNames] = useState([]);
+    
     useEffect(() => {
         axios({
-          method: "get",
-          url: `https://66f38c9f71c84d8058790dec.mockapi.io/crudapi`,
-        }).then((response) => {
-          console.log(response.data);
-          setNames(response.data);
-        });
+            method: "get",
+            url: `https://66f38c9f71c84d8058790dec.mockapi.io/crudapi`,
+          }).then((response) => {
+            console.log(response.data);
+            setNames(response.data);
+          });
       }, []);
-
     return (
         <View style={styles.container}>
             <View style={{flex: 4, alignItems: 'center'}}>
