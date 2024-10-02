@@ -9,7 +9,7 @@
 ##### 🖇 [Tuần 02](https://github.com/thahhtuyenn/TranThiThanhTuyen_ReactNative/tree/main/ReactNative_Lab02)
 ##### 🖇 [Tuần 03](https://github.com/thahhtuyenn/TranThiThanhTuyen_ReactNative/tree/main/ReactNativeLab03)
 ##### 🖇 [Tuần 04](https://github.com/thahhtuyenn/TranThiThanhTuyen_ReactNative/tree/main/ReactNativeLab04)
-
+##### 🖇 [Tuần 05](https://github.com/thahhtuyenn/TranThiThanhTuyen_ReactNative/tree/main/ReactNativeLab05)
 
 ### 🛠 Một số lệnh cơ bản 
 
