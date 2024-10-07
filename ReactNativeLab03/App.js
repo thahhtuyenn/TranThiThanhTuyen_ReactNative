@@ -13,6 +13,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <XMEyeScreen />
+      <View style={{}}></View>
     </View>
   );
 }
