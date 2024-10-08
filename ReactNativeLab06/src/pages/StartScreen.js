@@ -4,30 +4,28 @@ import {
   Image,
   Text,
   TextInput,
-  Pressable,
+  TouchableOpacity,
   Alert,
 } from "react-native";
 import React from "react";
 import { ListTodoScreen } from "./ListTodoScreen";
 import { useState, useEffect } from "react";
 
-const handleGetStarted = (navigation, email) => {
-    console.log(email);
-    if(email === "thanhtuyen9623@gmail.com")
-    {
-      navigation.navigate(ListTodoScreen);
-    }
-    else
-    {
-     Alert.alert("Invalid Email", "Please enter the correct email.");
-    }
-  }
+
 
 export const StartScreen = ({ navigation }) => {
 
-  [email, setEmail] = useState("thanhtuyen9623@gmail.com"); 
+  [user, setUser] = useState("thahhtuyenn");
 
-
+  const handleGetStarted = () => {
+    console.log(user);
+    if (user !== "" && user !== null) {
+      navigation.navigate("ListTodoScreen", {user: user});
+    }
+    else {
+      Alert.alert("Invalid username", "Please enter the correct username.");
+    }
+  }
   return (
     <View style={styles.container}>
       <View style={styles.container3}>
@@ -47,18 +45,18 @@ export const StartScreen = ({ navigation }) => {
               style={{ marginHorizontal: 10 }}
             />
             <TextInput
-              placeholder="Enter your email"
+              placeholder="Enter your username"
               style={{ width: "80%", height: 45 }}
-              value={email}
-              onChangeText={(text) => setEmail(text)}
+              value={user}
+              onChangeText={(text) => setUser(text)}
             />
           </View>
         </View>
 
         <View style={styles.containerButton}>
-          <Pressable style={styles.button} onPress={() => {handleGetStarted(navigation, email)}}>
+          <TouchableOpacity style={styles.button} onPress={() => { handleGetStarted() }}>
             <Text style={styles.text}>GET STARTED</Text>
-          </Pressable>
+          </TouchableOpacity>
         </View>
       </View>
     </View>

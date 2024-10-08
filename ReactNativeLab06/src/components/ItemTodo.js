@@ -3,38 +3,24 @@ import {
     StyleSheet,
     Image,
     Text,
-    Pressable,
+    TouchableOpacity,
     TextInput,
 } from "react-native";
 import axios from "axios";
-import { useState } from "react";
-export const ItemTodo = ({ id, name, checkedTodo, updateTodo }) => {
-    const [isUpdate, setIsUpdate] = useState(false);
-    const [newName, setNewName] = useState(name);
+export const ItemTodo = ({ todo, updateStatus, updateTodo}) => {
     return (
         <View style={styles.item}>
-            <Pressable
-                onPress={() => { checkedTodo(id) }}
+            <TouchableOpacity
+                onPress={() => { updateStatus(todo.id) }}
             >
                 <Image source={require("../../assets/img/icon-check.png")} style={{ marginHorizontal: 10 }} />
-            </Pressable>
-            {
-
-                !isUpdate ? <Text style={styles.textItem}> {name} </Text>
-                    : <TextInput value={newName} onChangeText={setNewName} style={{width: "60%", textAlign: 'left'}} />
-            }
-            <Pressable onPress={() => {setIsUpdate(!isUpdate); setNewName(name)}}>
-                {!isUpdate ? <Image source={require("../../assets/img/icon-update.png")} style={{ marginHorizontal: 10 }} />
-                    : (<View style={{marginRight: 10}}>
-                        <Text style={styles.textBtn}>Cancle</Text>
-                    
-                        <Pressable onPress={() => {updateTodo(id, newName), setIsUpdate(!isUpdate)}}  >
-                            <Text style={styles.textBtn} >Save</Text>
-                        </Pressable>
-                    </View>)
-                }
-
-            </Pressable>
+            </TouchableOpacity> 
+            <Text style={styles.textItem}> {todo.name} </Text>
+            <TouchableOpacity 
+            onPress={() => {updateTodo()}}
+            >
+               <Image source={require("../../assets/img/icon-update.png")} style={{ marginHorizontal: 10 }} />
+            </TouchableOpacity>
         </View>
     )
 }
