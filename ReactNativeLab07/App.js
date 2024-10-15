@@ -5,7 +5,7 @@ import { AppNavigation } from './src/navigations/AppNavigation';
 export default function App() {
   return (
     <View style={styles.container}>
-      <AppNavigation/>
+      <AppNavigation />
     </View>
   );
 }

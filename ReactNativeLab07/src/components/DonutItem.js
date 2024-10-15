@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text, TextInput, TouchableOpacity, Image } from "react-native";
 
 
-export const DonutItem = ({props}) => {
+export const DonutItem = ({props, addToCard}) => {
     const formatPrice = (price, style) => {
         return price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + style;
     };
@@ -32,7 +32,7 @@ export const DonutItem = ({props}) => {
                         {formatPrice(props.price, "đ")}
                     </Text>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => {addToCard(props)}}>
                         <Image source={require('../../assets/img/plus_button.png')} />
                     </TouchableOpacity>
                 </View>
