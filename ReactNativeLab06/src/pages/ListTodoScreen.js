@@ -83,7 +83,7 @@ useEffect(() => {}, [])
           </View>
         </View>
       </View>
-      <View style={{ flex: 2, justifyContent: "center", alignItems: "center" }}>
+      <View style={{ flex: 2, justifyContent: "center", alignItems: "center", width: "100%" }}>
         <FlatList
           data={todos}
           renderItem={({ item }) => {

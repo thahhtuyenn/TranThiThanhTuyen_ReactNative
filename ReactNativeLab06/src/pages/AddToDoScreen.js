@@ -26,7 +26,7 @@ export const AddToDoScreen = ({ navigation, route }) => {
                 Alert.alert("Add job", "Add job successfully");
                 navigation.navigate({
                     name: 'ListTodoScreen',
-                    params: { action: true },
+                    params: { action: `Add ${todo} successfully` },
                     merge: true,
                 });
             } else {
@@ -34,7 +34,7 @@ export const AddToDoScreen = ({ navigation, route }) => {
                 Alert.alert("Update job", "Update job successfully");
                 navigation.navigate({
                     name: 'ListTodoScreen',
-                    params: { action: true },
+                    params: { action: `Update ${todo} with id ${itemUpdate.id} successfully` },
                     merge: true,
                 });
             }

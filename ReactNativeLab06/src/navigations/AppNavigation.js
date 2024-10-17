@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 export const AppNavigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator screenOptions={{ headerShown: false, cardStyle: {flex: 1} }}>
         <Stack.Screen name="StartScreen" component={StartScreen} />
         <Stack.Screen name="ListTodoScreen" component={ListTodoScreen} />
         <Stack.Screen name="AddToDoScreen" component={AddToDoScreen} />

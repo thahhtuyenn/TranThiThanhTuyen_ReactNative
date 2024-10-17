@@ -30,7 +30,7 @@ export const ItemTodo = ({ todo, updateStatus, updateTodo}) => {
 const styles = StyleSheet.create({
     item: {
         height: 50,
-        width: "90%",
+        width: "95%",
         borderRadius: 25,
         marginHorizontal: 10,
         marginVertical: 5,
