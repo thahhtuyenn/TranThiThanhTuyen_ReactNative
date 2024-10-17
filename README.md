@@ -21,6 +21,11 @@ Môn học này bao gồm 10 tuần với 2 tuần đầu tập trung vào học
 #### [🗓 Tuần 8](https://github.com/thahhtuyenn/TranThiThanhTuyen_ReactNative/tree/main/ReactNativeLab03)
 - Nội dung: code các giao diện hiển thị danh sách sản phẩm xe đạp, dữ liệu từ api, khi người dùng nhấp chọn vào 1 sản phẩm, truyền props sang trang chi tiết sản phẩm.
 
+### Clone tất cả project
+```bash
+  git clone https://github.com/thahhtuyenn/TranThiThanhTuyen_ReactNative.git
+```
+
 ## 📞Liên hệ
 
 - Github: [thahhtuyenn](https://github.com/thahhtuyenn)
