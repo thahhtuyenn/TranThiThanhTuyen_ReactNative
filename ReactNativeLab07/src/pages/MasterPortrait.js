@@ -119,6 +119,7 @@ export const MasterPortrait = ({route, navigation}) => {
                             renderItem={({ item }) => <DonutItem props={item} addToCard={addToCard} />}
                             keyExtractor={(item) => item.id}
                         />
+
                     </View>
                 </View>
             </ScrollView>
